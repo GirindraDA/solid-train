@@ -94,6 +94,7 @@ header {
     }
     .nav-bar ul li a {
         margin-bottom: 10px;
+        background-color: black;
     }
     .nav-bar.active ul {
         opacity: 1;

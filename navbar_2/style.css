@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    background-color: brown;
+}
+
+.logo {
+    color: bisque;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    width: 50%;
+}
+
+nav ul li a{
+    color: bisque;
+}
+
+nav ul li a:hover {
+    color: rgb(253, 178, 87);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 576px){
+    /* Hamburger Menu */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20px;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: bisque;
+        border: 3px;
+    }
+
+    /* Navbar Versi Mobile */
+    .nav-bar {
+        position: absolute;
+        height: 0;
+        background: brown;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+    }
+
+    .nav-bar.active {
+        height: 250px;
+    }
+ 
+    .nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 50px auto 0 auto;
+        opacity: 0;
+    }
+
+    .nav-bar ul li a {
+        margin-bottom: 10px;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+}
+
+
